@@ -1,5 +1,7 @@
 ﻿using System;
 using Client.Base;
+using Client.Base.UI;
+using ImGuiNET;
 using OpenTK.Graphics.OpenGL4;
 using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
@@ -10,6 +12,7 @@ namespace Client
     internal sealed class ClientGame : Game
     {
         private readonly Color4 _clearColor;
+        private ImGuiController _imGuiController;
 
         public ClientGame(
             ILogger logger,
@@ -25,6 +28,7 @@ namespace Client
         protected override void Load()
         {
             base.Load();
+            _imGuiController = new ImGuiController(Window.Size.X, Window.Size.Y);
         }
 
         protected override void Render(FrameEventArgs e)
@@ -33,16 +37,28 @@ namespace Client
             GL.ClearColor(_clearColor);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
+            if (ImGui.Begin("TestWindow"))
+            {
+                if (ImGui.Button("Close"))
+                {
+                    Window.Close();
+                }
+
+                ImGui.End();
+            }
+            _imGuiController.Render();
             base.Render(e);
         }
 
         protected override void Unload()
         {
+            _imGuiController.Dispose();
             base.Unload();
         }
 
         protected override void Update(FrameEventArgs e)
         {
+            _imGuiController.Update(Window, (float)e.Time);
             base.Update(e);
         }
     }
