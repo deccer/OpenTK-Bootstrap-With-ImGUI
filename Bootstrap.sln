@@ -23,6 +23,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "src\Client\Client
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.Base", "src\Client.Base\Client.Base.csproj", "{BB185099-9E9F-434C-9EBC-7F64E8EB600F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{035F0207-569E-4980-AFB6-955D43727742}"
+ProjectSection(SolutionItems) = preProject
+	src\Directory.Build.props = src\Directory.Build.props
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +43,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B2D3FD5D-BBB9-430C-A4E1-1580BD43DF08} = {8FD3E3CF-F4A6-413C-BE30-76E910EACCEB}
 		{BB185099-9E9F-434C-9EBC-7F64E8EB600F} = {8FD3E3CF-F4A6-413C-BE30-76E910EACCEB}
+		{035F0207-569E-4980-AFB6-955D43727742} = {994A88DE-8340-4C18-B7B6-AF2A1C898DAB}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B2D3FD5D-BBB9-430C-A4E1-1580BD43DF08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
