@@ -65,6 +65,5 @@ namespace Client.Base
         {
             Window.SwapBuffers();
         }
-
     }
 }
