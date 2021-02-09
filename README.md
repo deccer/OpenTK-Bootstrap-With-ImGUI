@@ -2,9 +2,7 @@
 
 ## Getting started
 
-- Clone repo
-  `git clone --recursive https://github.com/deccer/OpenTK/Bootstrap-With-ImGUI /path/of/your/choice`
-
+- Use this template to create your own repo out of this one
 - Consider renaming the project as its just called `Client`, unless you plan on writing the next 3D-MMO ;)
 
 ## Versioning
@@ -13,4 +11,4 @@ Open `Version.props` and change `VersionMajor`, `VersionMinor`, `VersionPatch` a
 
 ## Dependencies
 
-`OpenTK` `Serilog` `Microsoft.Extensions.DependencyInjection`
+`OpenTK` `Serilog` `Microsoft.Extensions.DependencyInjection` `ImGUI.NET`
